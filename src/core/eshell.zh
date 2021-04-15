@@ -1,0 +1,12 @@
+#include "f18.zhh"
+
+FUNCTION eshell_cmd( cCmd, cFile )
+
+
+   IF cFile == NIL
+      cFile := ""
+   ENDIF
+   
+   zh_gtInfo( ZH_GTI_WINTITLE, "[vscode#" + cCmd + "]" + cFile + "[vscode#end]" )
+
+   RETURN .T.

@@ -1,0 +1,47 @@
+/*
+ * This file is part of the bring.out knowhow ERP, a free and open source
+ * Enterprise Resource Planning software suite,
+ * Copyright (c) 1994-2018 by bring.out doo Sarajevo.
+ * It is licensed to you under the Common Public Attribution License
+ * version 1.0, the full text of which (including FMK specific Exhibits)
+ * is available in the file LICENSE_CPAL_bring.out_knowhow.md located at the
+ * root directory of this source code archive.
+ * By using this software, you agree to be bound by its terms.
+ */
+
+#include "f18.zhh"
+
+MEMVAR gModul, goModul
+
+
+FUNCTION programski_modul()
+
+   LOCAL cRunParam := get_f18_param( "run" )
+
+   IF cRunParam <> "<undefined>"
+      RETURN Upper( cRunParam )
+   ENDIF
+
+   RETURN gModul
+
+
+FUNCTION start_f18_program_module( oApp, lSezone )
+
+   LOCAL cImeDbf
+   LOCAL nI
+
+   gModul   := oApp:cName
+   goModul  := oApp
+
+   IF oApp:lTerminate
+      RETURN .T.
+   ENDIF
+
+   oApp:set_module_gvars()
+   open_main_window()
+   pripremi_naslovni_ekran( oApp )
+   crtaj_naslovni_ekran()
+
+   RETURN .T.
+
+

@@ -1,0 +1,512 @@
+20:53:28: /home/hernad/ziher/src/bazel-bin/Z18/src/Z18-klijent<EOL>    158543
+20:53:29: STACK 1
+20:53:29: sendStack i=3cModule=my_sql_server.zh
+20:53:29: cModule=Z18/src/core_sql/my_sql_server.zh
+20:53:29: [cModule:nLine:functionName]Z18/src/core_sql/my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+20:53:31: DBG: sendFromInfo:PUBLICS 1
+20:53:31: DBG: sendFromInfo:PRIVATES 1
+20:53:31: DBG: sendFromInfo:PRIVATE_CALLEE 1
+20:53:32: STACK 4
+20:53:32: sendStack i=3cModule=ui_msgs.zh
+20:53:32: cModule=Z18/src/common/ui_msgs.zh
+20:53:32: [cModule:nLine:functionName]Z18/src/common/ui_msgs.zh:76:ERROR_BAR
+20:53:32: sendStack i=4cModule=
+20:53:32: [cModule:nLine:functionName]:222:CHECKSOCKET
+20:53:32: sendStack i=5cModule=
+20:53:32: [cModule:nLine:functionName]:1372:__DBGENTRY
+20:53:32: sendStack i=6cModule=Z18-klijent.zh
+20:53:32: cModule=Z18/src/Z18-klijent.zh
+20:53:32: [cModule:nLine:functionName]Z18/src/Z18-klijent.zh:57:MAIN
+20:53:33: STACK 3
+20:53:33: sendStack i=3cModule=Z18-klijent.zh
+20:53:33: cModule=Z18/src/Z18-klijent.zh
+20:53:33: [cModule:nLine:functionName]Z18/src/Z18-klijent.zh:34:GET_F18_PARAM
+20:53:33: sendStack i=4cModule=f18_utils.zh
+20:53:33: cModule=Z18/src/common/f18_utils.zh
+20:53:33: [cModule:nLine:functionName]Z18/src/common/f18_utils.zh:314:RUN_MODULE
+20:53:33: sendStack i=5cModule=Z18-klijent.zh
+20:53:33: cModule=Z18/src/Z18-klijent.zh
+20:53:33: [cModule:nLine:functionName]Z18/src/Z18-klijent.zh:65:MAIN
+20:58:26: /home/hernad/ziher/src/bazel-bin/Z18/src/Z18-klijent<EOL>    159356
+20:58:26: STACK 1
+20:58:26: sendStack i=3 cModule=my_sql_server.zh
+20:58:26: cModule=my_sql_server.zh
+20:58:26: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+20:58:30: STACK 4
+20:58:30: sendStack i=3 cModule=ui_msgs.zh
+20:58:30: cModule=ui_msgs.zh
+20:58:30: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+20:58:30: sendStack i=4 cModule=
+20:58:30: [cModule:nLine:functionName]:222:CHECKSOCKET
+20:58:30: sendStack i=5 cModule=
+20:58:30: [cModule:nLine:functionName]:1373:__DBGENTRY
+20:58:30: sendStack i=6 cModule=Z18-klijent.zh
+20:58:30: cModule=Z18-klijent.zh
+20:58:30: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+20:58:34: STACK 2
+20:58:34: sendStack i=3 cModule=f18_utils.zh
+20:58:34: cModule=f18_utils.zh
+20:58:34: [cModule:nLine:functionName]f18_utils.zh:85:SET_F18_PARAMS
+20:58:34: sendStack i=4 cModule=Z18-klijent.zh
+20:58:34: cModule=Z18-klijent.zh
+20:58:34: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+20:58:48: /home/hernad/ziher/src/bazel-bin/Z18/src/Z18-klijent<EOL>    159445
+20:58:48: STACK 1
+20:58:48: sendStack i=3 cModule=my_sql_server.zh
+20:58:48: cModule=my_sql_server.zh
+20:58:48: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+20:58:53: STACK 4
+20:58:53: sendStack i=3 cModule=ui_msgs.zh
+20:58:53: cModule=ui_msgs.zh
+20:58:53: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+20:58:53: sendStack i=4 cModule=
+20:58:53: [cModule:nLine:functionName]:222:CHECKSOCKET
+20:58:53: sendStack i=5 cModule=
+20:58:53: [cModule:nLine:functionName]:1373:__DBGENTRY
+20:58:53: sendStack i=6 cModule=Z18-klijent.zh
+20:58:53: cModule=Z18-klijent.zh
+20:58:53: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+20:59:02: STACK 5
+20:59:02: sendStack i=3 cModule=my_sql_server.zh
+20:59:02: cModule=my_sql_server.zh
+20:59:02: [cModule:nLine:functionName]my_sql_server.zh:247:MY_SERVER_LOGIN
+20:59:02: sendStack i=4 cModule=f18_login.zh
+20:59:02: cModule=f18_login.zh
+20:59:02: [cModule:nLine:functionName]f18_login.zh:173:F18LOGIN;CONNECT
+20:59:02: sendStack i=5 cModule=f18_login.zh
+20:59:02: cModule=f18_login.zh
+20:59:02: [cModule:nLine:functionName]f18_login.zh:209:F18LOGIN;CONNECT_USER_DATABASE
+20:59:02: sendStack i=6 cModule=f18_utils.zh
+20:59:02: cModule=f18_utils.zh
+20:59:02: [cModule:nLine:functionName]f18_utils.zh:328:RUN_MODULE
+20:59:02: sendStack i=7 cModule=Z18-klijent.zh
+20:59:02: cModule=Z18-klijent.zh
+20:59:02: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+20:59:41: /home/hernad/ziher/src/bazel-bin/Z18/src/Z18-klijent<EOL>    159535
+20:59:41: STACK 1
+20:59:41: sendStack i=3 cModule=my_sql_server.zh
+20:59:41: cModule=my_sql_server.zh
+20:59:41: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+20:59:48: STACK 4
+20:59:48: sendStack i=3 cModule=ui_msgs.zh
+20:59:48: cModule=ui_msgs.zh
+20:59:48: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+20:59:48: sendStack i=4 cModule=
+20:59:48: [cModule:nLine:functionName]:222:CHECKSOCKET
+20:59:48: sendStack i=5 cModule=
+20:59:48: [cModule:nLine:functionName]:1373:__DBGENTRY
+20:59:48: sendStack i=6 cModule=Z18-klijent.zh
+20:59:48: cModule=Z18-klijent.zh
+20:59:48: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:00:28: /home/hernad/ziher/src/bazel-bin/Z18/src/Z18-klijent<EOL>    159631
+21:00:29: STACK 1
+21:00:29: sendStack i=3 cModule=my_sql_server.zh
+21:00:29: cModule=my_sql_server.zh
+21:00:29: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:00:35: STACK 4
+21:00:35: sendStack i=3 cModule=ui_msgs.zh
+21:00:35: cModule=ui_msgs.zh
+21:00:35: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+21:00:35: sendStack i=4 cModule=
+21:00:35: [cModule:nLine:functionName]:222:CHECKSOCKET
+21:00:35: sendStack i=5 cModule=
+21:00:35: [cModule:nLine:functionName]:1373:__DBGENTRY
+21:00:35: sendStack i=6 cModule=Z18-klijent.zh
+21:00:35: cModule=Z18-klijent.zh
+21:00:35: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:00:36: STACK 5
+21:00:36: sendStack i=3 cModule=f18_log.zh
+21:00:36: cModule=f18_log.zh
+21:00:36: [cModule:nLine:functionName]f18_log.zh:118:LOG_WRITE_FILE
+21:00:36: sendStack i=4 cModule=f18_log.zh
+21:00:36: cModule=f18_log.zh
+21:00:36: [cModule:nLine:functionName]f18_log.zh:32:F18_OUTERR
+21:00:36: sendStack i=5 cModule=f18_init.zh
+21:00:36: cModule=f18_init.zh
+21:00:36: [cModule:nLine:functionName]f18_init.zh:556:SET_F18_CURRENT_DIRECTORY
+21:00:36: sendStack i=6 cModule=f18_utils.zh
+21:00:36: cModule=f18_utils.zh
+21:00:36: [cModule:nLine:functionName]f18_utils.zh:320:RUN_MODULE
+21:00:36: sendStack i=7 cModule=Z18-klijent.zh
+21:00:36: cModule=Z18-klijent.zh
+21:00:36: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+21:00:36: STACK 9
+21:00:36: sendStack i=3 cModule=a_dbfs.zh
+21:00:36: cModule=a_dbfs.zh
+21:00:36: [cModule:nLine:functionName]a_dbfs.zh:189:SET_A_DBF_SIFARNIK
+21:00:36: sendStack i=4 cModule=a_dbfs.zh
+21:00:36: cModule=a_dbfs.zh
+21:00:36: [cModule:nLine:functionName]a_dbfs.zh:167:SET_A_SQL_SIFARNIK
+21:00:36: sendStack i=5 cModule=_set_a_dbf_sif.zh
+21:00:36: cModule=_set_a_dbf_sif.zh
+21:00:36: [cModule:nLine:functionName]_set_a_dbf_sif.zh:61:SET_A_DBF_SIF
+21:00:36: sendStack i=6 cModule=a_dbfs.zh
+21:00:36: cModule=a_dbfs.zh
+21:00:36: [cModule:nLine:functionName]a_dbfs.zh:37:SET_A_DBFS
+21:00:36: sendStack i=7 cModule=f18_init.zh
+21:00:36: cModule=f18_init.zh
+21:00:36: [cModule:nLine:functionName]f18_init.zh:85:POST_LOGIN
+21:00:36: sendStack i=8 cModule=f18_login.zh
+21:00:36: cModule=f18_login.zh
+21:00:36: [cModule:nLine:functionName]f18_login.zh:183:F18LOGIN;CONNECT
+21:00:36: sendStack i=9 cModule=f18_login.zh
+21:00:36: cModule=f18_login.zh
+21:00:36: [cModule:nLine:functionName]f18_login.zh:209:F18LOGIN;CONNECT_USER_DATABASE
+21:00:36: sendStack i=10 cModule=f18_utils.zh
+21:00:36: cModule=f18_utils.zh
+21:00:36: [cModule:nLine:functionName]f18_utils.zh:328:RUN_MODULE
+21:00:36: sendStack i=11 cModule=Z18-klijent.zh
+21:00:36: cModule=Z18-klijent.zh
+21:00:36: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+21:01:15: /home/hernad/ziher/src/bazel-bin/Z18/src/Z18-klijent<EOL>    160101
+21:01:16: STACK 1
+21:01:16: sendStack i=3 cModule=my_sql_server.zh
+21:01:16: cModule=my_sql_server.zh
+21:01:16: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:01:22: STACK 4
+21:01:22: sendStack i=3 cModule=ui_msgs.zh
+21:01:22: cModule=ui_msgs.zh
+21:01:22: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+21:01:22: sendStack i=4 cModule=
+21:01:22: [cModule:nLine:functionName]:222:CHECKSOCKET
+21:01:22: sendStack i=5 cModule=
+21:01:22: [cModule:nLine:functionName]:1373:__DBGENTRY
+21:01:22: sendStack i=6 cModule=Z18-klijent.zh
+21:01:22: cModule=Z18-klijent.zh
+21:01:22: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:01:30: STACK 10
+21:01:30: sendStack i=3 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:129:F18_DBFS_ADD
+21:01:30: sendStack i=4 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:209:SET_A_DBF_SIFARNIK
+21:01:30: sendStack i=5 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:167:SET_A_SQL_SIFARNIK
+21:01:30: sendStack i=6 cModule=_set_a_dbf_sif.zh
+21:01:30: cModule=_set_a_dbf_sif.zh
+21:01:30: [cModule:nLine:functionName]_set_a_dbf_sif.zh:49:SET_A_DBF_SIF
+21:01:30: sendStack i=7 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:37:SET_A_DBFS
+21:01:30: sendStack i=8 cModule=f18_init.zh
+21:01:30: cModule=f18_init.zh
+21:01:30: [cModule:nLine:functionName]f18_init.zh:85:POST_LOGIN
+21:01:30: sendStack i=9 cModule=f18_login.zh
+21:01:30: cModule=f18_login.zh
+21:01:30: [cModule:nLine:functionName]f18_login.zh:183:F18LOGIN;CONNECT
+21:01:30: sendStack i=10 cModule=f18_login.zh
+21:01:30: cModule=f18_login.zh
+21:01:30: [cModule:nLine:functionName]f18_login.zh:209:F18LOGIN;CONNECT_USER_DATABASE
+21:01:30: sendStack i=11 cModule=f18_utils.zh
+21:01:30: cModule=f18_utils.zh
+21:01:30: [cModule:nLine:functionName]f18_utils.zh:328:RUN_MODULE
+21:01:30: sendStack i=12 cModule=Z18-klijent.zh
+21:01:30: cModule=Z18-klijent.zh
+21:01:30: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+21:01:30: STACK 9
+21:01:30: sendStack i=3 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:129:F18_DBFS_ADD
+21:01:30: sendStack i=4 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:160:SET_A_DBF_TEMP
+21:01:30: sendStack i=5 cModule=_set_a_dbf_fin.zh
+21:01:30: cModule=_set_a_dbf_fin.zh
+21:01:30: [cModule:nLine:functionName]_set_a_dbf_fin.zh:35:SET_A_DBF_FIN
+21:01:30: sendStack i=6 cModule=a_dbfs.zh
+21:01:30: cModule=a_dbfs.zh
+21:01:30: [cModule:nLine:functionName]a_dbfs.zh:43:SET_A_DBFS
+21:01:30: sendStack i=7 cModule=f18_init.zh
+21:01:30: cModule=f18_init.zh
+21:01:30: [cModule:nLine:functionName]f18_init.zh:85:POST_LOGIN
+21:01:30: sendStack i=8 cModule=f18_login.zh
+21:01:30: cModule=f18_login.zh
+21:01:30: [cModule:nLine:functionName]f18_login.zh:183:F18LOGIN;CONNECT
+21:01:30: sendStack i=9 cModule=f18_login.zh
+21:01:30: cModule=f18_login.zh
+21:01:30: [cModule:nLine:functionName]f18_login.zh:209:F18LOGIN;CONNECT_USER_DATABASE
+21:01:30: sendStack i=10 cModule=f18_utils.zh
+21:01:30: cModule=f18_utils.zh
+21:01:30: [cModule:nLine:functionName]f18_utils.zh:328:RUN_MODULE
+21:01:30: sendStack i=11 cModule=Z18-klijent.zh
+21:01:30: cModule=Z18-klijent.zh
+21:01:30: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+21:04:59: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:05:12: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+21:05:12: [cModule:nLine:functionName]:220:CHECKSOCKET
+21:05:12: [cModule:nLine:functionName]:1369:__DBGENTRY
+21:05:12: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:05:16: [cModule:nLine:functionName]f18_utils.zh:98:SET_F18_PARAMS
+21:05:16: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:05:51: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:05:53: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+21:05:53: [cModule:nLine:functionName]:220:CHECKSOCKET
+21:05:53: [cModule:nLine:functionName]:1369:__DBGENTRY
+21:05:53: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:05:55: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:05:55: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:07:00: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:07:07: [cModule:nLine:functionName]ui_msgs.zh:76:ERROR_BAR
+21:07:07: [cModule:nLine:functionName]:220:CHECKSOCKET
+21:07:07: [cModule:nLine:functionName]:1369:__DBGENTRY
+21:07:07: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:07:23: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:07:23: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:08:33: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:08:36: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:08:42: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:08:42: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:10:23: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:10:26: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:10:30: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:10:30: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:12:22: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:12:31: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:12:42: [cModule:nLine:functionName]Z18-klijent.zh:58:MAIN
+21:12:43: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:12:48: [cModule:nLine:functionName]f18_utils.zh:106:SET_F18_PARAMS
+21:12:48: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:12:48: [cModule:nLine:functionName]f18_utils.zh:106:SET_F18_PARAMS
+21:12:48: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:12:48: [cModule:nLine:functionName]f18_utils.zh:106:SET_F18_PARAMS
+21:12:48: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:21:05: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:21:08: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:21:10: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:21:10: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:24:33: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:24:36: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:24:37: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:24:37: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+21:25:08: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+21:25:10: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+21:25:11: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+21:25:11: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+23:12:04: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+23:12:09: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+23:12:10: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+23:12:10: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+23:12:32: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+23:12:35: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+23:12:37: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+23:12:37: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+23:18:59: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+23:19:05: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+23:19:09: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+23:19:09: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+07:38:42: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+07:38:49: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+07:38:50: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+07:38:50: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:15:22: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+08:15:25: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+08:15:26: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:15:26: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:15:45: [cModule:nLine:functionName]f18_utils.zh:106:SET_F18_PARAMS
+08:15:45: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:15:47: [cModule:nLine:functionName]f18_utils.zh:112:SET_F18_PARAMS
+08:15:47: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:15:49: [cModule:nLine:functionName]f18_utils.zh:117:SET_F18_PARAMS
+08:15:49: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:16:31: [cModule:nLine:functionName]f18_utils.zh:122:SET_F18_PARAMS
+08:16:31: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:16:33: [cModule:nLine:functionName]f18_utils.zh:127:SET_F18_PARAMS
+08:16:33: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:16:34: [cModule:nLine:functionName]f18_utils.zh:132:SET_F18_PARAMS
+08:16:34: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:16:36: [cModule:nLine:functionName]f18_utils.zh:146:SET_F18_PARAMS
+08:16:36: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:02: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:02: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:04: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:04: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:08: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:08: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:08: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:08: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:11: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:11: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:15: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:15: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:19: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:19: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:21: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:21: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:24: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:24: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:24: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:24: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:17:27: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:17:27: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:25: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+08:55:28: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+08:55:30: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:30: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:32: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:32: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:33: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:33: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:34: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:34: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:40: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:40: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:41: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:41: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:42: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:42: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:43: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:43: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:55:44: [cModule:nLine:functionName]f18_utils.zh:101:SET_F18_PARAMS
+08:55:44: [cModule:nLine:functionName]Z18-klijent.zh:62:MAIN
+08:59:15: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+08:59:17: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:01:16: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:01:19: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:01:20: [cModule:nLine:functionName]f18_login.zh:83:F18LOGIN;NEW
+09:01:20: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:20: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:20: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:25: [cModule:nLine:functionName]f18_login.zh:84:F18LOGIN;NEW
+09:01:25: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:25: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:25: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:26: [cModule:nLine:functionName]f18_login.zh:85:F18LOGIN;NEW
+09:01:26: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:26: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:26: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:27: [cModule:nLine:functionName]f18_login.zh:86:F18LOGIN;NEW
+09:01:27: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:27: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:27: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:51: [cModule:nLine:functionName]f18_login.zh:87:F18LOGIN;NEW
+09:01:51: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:51: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:51: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:52: [cModule:nLine:functionName]f18_login.zh:88:F18LOGIN;NEW
+09:01:52: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:52: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:52: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:53: [cModule:nLine:functionName]f18_login.zh:89:F18LOGIN;NEW
+09:01:53: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:53: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:53: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:53: [cModule:nLine:functionName]f18_login.zh:90:F18LOGIN;NEW
+09:01:53: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:53: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:53: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:54: [cModule:nLine:functionName]f18_login.zh:91:F18LOGIN;NEW
+09:01:54: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:54: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:54: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:56: [cModule:nLine:functionName]f18_login.zh:92:F18LOGIN;NEW
+09:01:56: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:56: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:56: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:01:58: [cModule:nLine:functionName]f18_login.zh:94:F18LOGIN;NEW
+09:01:58: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:01:58: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:01:58: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:00: [cModule:nLine:functionName]f18_login.zh:96:F18LOGIN;NEW
+09:02:00: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:00: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:00: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:01: [cModule:nLine:functionName]f18_login.zh:98:F18LOGIN;NEW
+09:02:01: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:01: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:01: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:02: [cModule:nLine:functionName]f18_login.zh:99:F18LOGIN;NEW
+09:02:02: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:02: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:02: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:03: [cModule:nLine:functionName]f18_login.zh:100:F18LOGIN;NEW
+09:02:03: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:03: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:03: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:04: [cModule:nLine:functionName]f18_login.zh:101:F18LOGIN;NEW
+09:02:04: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:04: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:04: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:05: [cModule:nLine:functionName]f18_login.zh:103:F18LOGIN;NEW
+09:02:05: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:05: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:05: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:06: [cModule:nLine:functionName]f18_login.zh:104:F18LOGIN;NEW
+09:02:06: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:06: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:06: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:07: [cModule:nLine:functionName]f18_login.zh:106:F18LOGIN;NEW
+09:02:07: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:07: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:07: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:02:08: [cModule:nLine:functionName]f18_login.zh:126:F18LOGIN;NEW
+09:02:08: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:02:08: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:02:08: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:13:02: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:13:07: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:13:08: [cModule:nLine:functionName]f18_login.zh:83:F18LOGIN;NEW
+09:13:08: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:13:08: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:13:08: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:18:51: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:18:54: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:18:55: [cModule:nLine:functionName]f18_login.zh:83:F18LOGIN;NEW
+09:18:55: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:18:55: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:18:55: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:20:40: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:20:46: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:20:47: [cModule:nLine:functionName]f18_login.zh:83:F18LOGIN;NEW
+09:20:47: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:20:47: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:20:47: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:24:47: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:24:50: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:24:51: [cModule:nLine:functionName]f18_login.zh:83:F18LOGIN;NEW
+09:24:51: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:24:51: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:24:51: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+09:25:08: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:25:13: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+09:25:15: [cModule:nLine:functionName]f18_login.zh:83:F18LOGIN;NEW
+09:25:15: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+09:25:15: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+09:25:15: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+12:18:39: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+12:18:42: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+12:18:44: [cModule:nLine:functionName]f18_login.zh:84:F18LOGIN;NEW
+12:18:44: [cModule:nLine:functionName]f18_login.zh:72:MY_LOGIN
+12:18:44: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+12:18:44: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+12:53:15: [cModule:nLine:functionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+12:53:18: [cModule:nLine:functionName]Z18-klijent.zh:57:MAIN
+12:53:21: [cModule:nLine:functionName]f18_login.zh:84:F18LOGIN;NEW
+12:53:21: [cModule:nLine:functionName]f18_login.zh:73:MY_LOGIN
+12:53:21: [cModule:nLine:functionName]f18_utils.zh:327:RUN_MODULE
+12:53:21: [cModule:nLine:functionName]Z18-klijent.zh:65:MAIN
+13:43:40: [cModule:nLine:cFunctionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+13:43:42: [cModule:nLine:cFunctionName]Z18-klijent.zh:57:MAIN
+13:43:43: [cModule:nLine:cFunctionName]f18_login.zh:84:F18LOGIN;NEW
+13:43:43: [cModule:nLine:cFunctionName]f18_login.zh:73:MY_LOGIN
+13:43:43: [cModule:nLine:cFunctionName]f18_utils.zh:327:RUN_MODULE
+13:43:43: [cModule:nLine:cFunctionName]Z18-klijent.zh:65:MAIN
+08:24:03: [cModule:nLine:cFunctionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+08:24:07: [cModule:nLine:cFunctionName]Z18-klijent.zh:57:MAIN
+08:24:15: [cModule:nLine:cFunctionName]f18_login.zh:84:F18LOGIN;NEW
+08:24:15: [cModule:nLine:cFunctionName]f18_login.zh:73:MY_LOGIN
+08:24:15: [cModule:nLine:cFunctionName]f18_utils.zh:327:RUN_MODULE
+08:24:15: [cModule:nLine:cFunctionName]Z18-klijent.zh:65:MAIN
+08:25:45: [cModule:nLine:cFunctionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+08:25:47: [cModule:nLine:cFunctionName]Z18-klijent.zh:57:MAIN
+08:25:48: [cModule:nLine:cFunctionName]f18_login.zh:84:F18LOGIN;NEW
+08:25:48: [cModule:nLine:cFunctionName]f18_login.zh:73:MY_LOGIN
+08:25:48: [cModule:nLine:cFunctionName]f18_utils.zh:327:RUN_MODULE
+08:25:48: [cModule:nLine:cFunctionName]Z18-klijent.zh:65:MAIN
+09:19:35: [cModule:nLine:cFunctionName]my_sql_server.zh:344:INIT_MY_SQL_SERVER$
+09:19:42: [cModule:nLine:cFunctionName]Z18-klijent.zh:57:MAIN
+09:19:43: [cModule:nLine:cFunctionName]f18_login.zh:84:F18LOGIN;NEW
+09:19:43: [cModule:nLine:cFunctionName]f18_login.zh:73:MY_LOGIN
+09:19:43: [cModule:nLine:cFunctionName]f18_utils.zh:327:RUN_MODULE
+09:19:43: [cModule:nLine:cFunctionName]Z18-klijent.zh:65:MAIN

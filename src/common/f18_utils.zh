@@ -1,0 +1,386 @@
+/*
+ * This file is part of the bring.out knowhow ERP, a free and open source
+ * Enterprise Resource Planning suite,
+ * Copyright (c) 1994-2018 by bring.out d.o.o Sarajevo.
+ * It is licensed to you under the Common Public Attribution License
+ * version 1.0, the full text of which (including knowhow ERP specific Exhibits)
+ * is available in the file LICENSE_CPAL_bring.out_knowhow.md located at the
+ * root directory of this source code archive.
+ * By using this software, you agree to be bound by its terms.
+ */
+
+#include "f18.zhh"
+
+FUNCTION usex( cTable )
+   RETURN my_use( cTable )
+
+
+FUNCTION f18_create_dir( cLocation )
+
+   LOCAL nLen
+   LOCAL cTmp
+   LOCAL nCreate
+
+   IF ! zh_vfDirExists( cLocation )
+      nCreate := DirMake( cLocation )
+      IF nCreate <> 0
+         log_write( "f18_create_dir, problem sa kreiranjem direktorija: (" + cLocation + ")", 5 )
+         RETURN .F.
+      ENDIF
+   ENDIF
+
+   RETURN .T.
+
+
+
+FUNCTION f18_help()
+
+   ? "F18 parametri"
+   ? "parametri"
+   ? "-h host"
+   // ? "-y port (default: 5432)"
+   ? "-u user"
+   ? "-p password"
+   ? "-d database"
+   // ? "-e schema (default: public)"
+   // ? "-t fmk tables path"
+   ? ""
+
+   RETURN .T.
+
+/*
+ setup ulazne parametre F18
+*/
+
+FUNCTION set_f18_params( ... )
+
+   LOCAL nI := 1
+   LOCAL cVal, cQuery
+   LOCAL cTok, hParams
+   LOCAL cHostName, nPort, cDataBase, cUser, cPassWord
+   LOCAL aOpcije, cOpcije
+
+   hParams := zh_Hash()
+   hParams[ "admin_user" ]  := "<undefined>"
+   hParams[ "admin_password" ]  := "<undefined>"
+   hParams[ "pos_pm" ] := Padr("1", 2)
+
+   cOpcije := ""
+   DO WHILE nI <= PCount()
+      cOpcije += IIF( nI==0, "", " ") + zh_PValue( nI++ )
+   ENDDO
+
+   aOpcije := zh_ATokens( cOpcije, " ")
+
+   nI := 1
+   DO WHILE nI <= LEN( aOpcije )
+
+      cTok := aOpcije[ nI++ ]
+
+      DO CASE
+
+      CASE cTok == NIL
+         EXIT
+
+      CASE cTok == "--no-sql"
+         no_sql_mode( .T. )
+
+      CASE cTok == "--test"
+         test_mode( .T. )
+
+      CASE cTok == "--help"
+         f18_help()
+         __Quit()
+
+      CASE cTok == "--dbf-prefix"   // prefix privatni dbf
+         dbf_prefix( aOpcije[ nI++ ] )
+
+      CASE cTok == "--run-on-start"
+         run_on_start_param( aOpcije[ nI++ ] )
+
+      CASE cTok == "-h"
+         cHostName := aOpcije[ nI++ ]
+         set_f18_param( "host", cHostName )
+         hParams[ "host" ] := cHostName
+
+      CASE cTok == "-y"
+         nPort := Val( aOpcije[ nI++ ] )
+         // cParams += Space( 1 ) + "port=" + AllTrim( Str( nPort ) )
+         set_f18_param( "port", nPort )
+         hParams[ "port" ] := nPort
+
+      CASE cTok == "-d"
+         cDataBase := aOpcije[ nI++ ]
+         set_f18_param( "database", cDatabase )
+         hParams[ "database" ] := cDatabase
+
+      CASE cTok == "-u"
+         cUser := aOpcije[ nI++ ]
+         set_f18_param( "user", cUser )
+         hParams[ "user" ] := cUser
+
+      CASE cTok == "-ua"
+         cUser := aOpcije[ nI++ ]
+         set_f18_param( "admin_user", cUser )
+         hParams[ "admin_user" ]  := cUser
+
+      CASE cTok == "-pa"
+         cPassWord := aOpcije[ nI++ ]
+         set_f18_param( "admin_password", cPassword )
+         hParams[ "admin_password" ]  := cPassword
+
+      CASE cTok == "-p"
+         cPassWord := aOpcije[ nI++ ]
+         set_f18_param( "password", cPassword )
+         hParams[ "password" ]  := cPassword
+
+
+         // CASE cTok == "-t"
+         // cDBFDataPath := zh_PValue( nI++ )
+         // hParams[ "dbf_path" ]  := cDBFDataPath
+
+         // CASE cTok == "-e"
+         // cSchema := zh_PValue( nI++ )
+         // hParams[ "schema" ] := cSchema
+
+      CASE cTok == "--show-postgresql-version"
+         show_postgresql_version( hParams )
+         __Quit()
+
+      CASE cTok == "--set-pos"
+         f18_sql_connect( hParams )
+         cVal := aOpcije[ nI++ ]
+         cQuery := "SELECT public.setmetric('pos_prod','" + cVal + "')"
+         dbUseArea( .T., , cQuery, "INFO" )
+         OutStd( "Parametar [pos_pod] postavljen: " + cVal )
+         __Quit()
+
+      CASE cTok == "--get-pos"
+         f18_sql_connect( hParams )
+         dbUseArea( .T., , "SELECT public.fetchmetrictext('pos_prod') AS prod", "INFO" )
+         OutStd( "Parametar [pos_pod]: " +  field->prod )
+         __Quit()
+
+      CASE cTok == "--pos"
+         set_f18_param( "run", "pos" )
+
+      CASE cTok == "--pos-pm"
+         set_f18_param( "pos_pm", aOpcije[ nI++ ] )
+
+      CASE cTok == "--kalk"
+         set_f18_param( "run", "kalk" )
+
+      CASE cTok == "--fin"
+         set_f18_param( "run", "fin" )
+
+      CASE cTok == "--fakt"
+         set_f18_param( "run", "fakt" )
+
+      CASE cTok == "--epdv"
+         set_f18_param( "run", "epdv" )
+
+      CASE cTok == "--os"
+         set_f18_param( "run", "os" )
+
+      CASE cTok == "--ld"
+         set_f18_param( "run", "ld" )
+
+      CASE Left( cTok, 7 ) == "--json_"
+         set_f18_param( "run", SubStr( cTok, 3 ) ) // json_konto, json_roba ...
+
+      CASE cTok == "--data-home"
+         set_f18_param( "data_home", aOpcije[ nI++ ] )
+
+      ENDCASE
+
+   ENDDO
+
+   RETURN hParams
+
+
+
+FUNCTION pp( x )
+
+   LOCAL _key, nI
+   LOCAL cTmp
+   LOCAL cType
+
+   cTmp := ""
+
+   cType := ValType( x )
+
+   IF cType == "H"
+      cTmp += "(hash): "
+      FOR EACH _key in x:Keys
+         cTmp +=  pp( _key ) + " / " + pp( x[ _key ] ) + " ; "
+      NEXT
+      RETURN cTmp
+   ENDIF
+
+   IF cType == "A"
+      cTmp += "(array): "
+      FOR nI := 1 TO Len( x )
+         cTmp +=  AllTrim( pp( nI ) ) + " / " + pp( x[ nI ] ) + " ; "
+      NEXT
+      RETURN cTmp
+   ENDIF
+
+   IF cType $ "CLDNM"
+      RETURN ValToStr( x )
+   ENDIF
+
+   RETURN "?" + cType + "?"
+
+
+
+FUNCTION f18_copy_to_desktop( cFilePath, cFileName, cOutputFile )
+
+   LOCAL cDesktopPath
+
+   create_f18_dokumenti_on_desktop( @cDesktopPath )
+
+   IF cOutputFile == NIL
+      cOutputFile := ""
+   ENDIF
+
+   IF Empty( cOutputFile )
+      cOutputFile := cFileName
+   ENDIF
+
+   FileCopy( cFilePath + cFileName, cDesktopPath + cOutputFile )
+
+   RETURN .T.
+
+
+
+
+FUNCTION create_f18_dokumenti_on_desktop( s_cDesktopPath )
+
+   LOCAL _home_path
+   LOCAL _desk_path := ""
+   LOCAL _desk_folder := "F18_dokumenti"
+   LOCAL _cre
+
+#ifdef __PLATFORM__WINDOWS
+
+   _home_path := zh_DirSepAdd( GetEnv( "USERPROFILE" ) )
+   _desk_path := _home_path + "Desktop" + SLASH
+#else
+   _home_path := zh_DirSepAdd( GetEnv( "HOME" ) )
+   _desk_path := _home_path + "Desktop" + SLASH
+   IF DirChange( _desk_path ) != 0
+      _desk_path := _home_path + "Radna površ" + SLASH
+   ENDIF
+#endif
+
+   s_cDesktopPath := _desk_path + _desk_folder + SLASH
+
+   IF DirChange( '"' + s_cDesktopPath + '"' ) != 0
+      _cre := MakeDir( s_cDesktopPath )
+   ENDIF
+
+   DirChange( my_home() )
+
+   RETURN .T.
+
+
+
+PROCEDURE f18_sql_connect( hParams )
+
+   LOCAL oServer, pConn
+
+   oServer := TPQServer():New( hParams[ "host" ], hParams[ "database" ], hParams[ "user" ], hParams[ "password" ] )
+   pConn := oServer:pDB
+   rddSetDefault( "SQLMIX" )
+   // postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
+   IF rddInfo( 1001, { "POSTGRESQL", pConn } ) == 0
+      ? "Could not connect to the server"
+      RETURN
+   ENDIF
+
+   RETURN
+
+PROCEDURE show_postgresql_version( hParams )
+
+   f18_sql_connect()
+   dbUseArea( .T., , "SELECT version() AS ver", "INFO" )
+   OutStd( field->ver )
+
+   RETURN
+
+
+PROCEDURE run_module()
+
+   LOCAL cModul := get_f18_param( "run" )
+   LOCAL oLogin
+   LOCAL aRet, hRec
+
+   harbour_init()
+   init_parameters_cache()
+   set_f18_current_directory()
+   set_f18_home_root()
+   set_global_vars_0()
+   f18_error_block()
+
+   set_screen_dimensions()
+
+   oLogin := my_login()
+   oLogin:connect_user_database()
+
+   IF cModul == "json_konto"
+      select_o_konto()
+      aRet := {}
+      DO WHILE !Eof()
+         hRec := zh_Hash()
+         hRec[ "id" ] := zh_StrToUTF8( field->id )
+         hRec[ "naz" ] := zh_StrToUTF8( field->naz )
+         AAdd( aRet, hRec )
+         SKIP
+      ENDDO
+      OutErr( e"\n" )
+      OutErr( e"========F18_json:======\n" )
+      OutErr( zh_jsonEncode( aRet ) )
+      RETURN
+   ENDIF
+
+   IF cModul == "json_roba"
+      select_o_roba()
+      aRet := {}
+      DO WHILE !Eof()
+         hRec := zh_Hash()
+         hRec[ "id" ] := zh_StrToUTF8( field->id )
+         hRec[ "naz" ] := zh_StrToUTF8( field->naz )
+         AAdd( aRet, hRec )
+         SKIP
+      ENDDO
+      OutErr( e"\n" )
+      OutErr( e"========F18_json:======\n" )
+      OutErr( zh_jsonEncode( aRet ) )
+      RETURN
+   ENDIF
+
+
+   IF cModul == "pos"
+      set_metric( "main_menu_pos", my_user(), "D" )
+      MainPos( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ELSEIF cModul == "fin"
+      set_metric( "main_menu_fin", my_user(), "D" )
+      MainFin( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ELSEIF cModul == "kalk"
+      set_metric( "main_menu_kalk", my_user(), "D" )
+      MainKalk( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ELSEIF cModul == "fakt"
+      set_metric( "main_menu_fakt", my_user(), "D" )
+      MainFakt( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ELSEIF cModul == "epdv"
+      set_metric( "main_menu_epdv", my_user(), "D" )
+      MainEPdv( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ELSEIF cModul == "os"
+      set_metric( "main_menu_os", my_user(), "D" )
+      MainOs( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ELSEIF cModul == "ld"
+      set_metric( "main_menu_ld", my_user(), "D" )
+      MainLd( my_user(), "dummy", get_f18_param( "p3" ),  get_f18_param( "p4" ),  get_f18_param( "p5" ),  get_f18_param( "p6" ),  get_f18_param( "p7" ) )
+   ENDIF
+
+   RETURN
