@@ -15,6 +15,7 @@ PROCEDURE thread_create_dbfs()
 
    LOCAL _ver
 
+   __ZHVMInit()
 #ifdef F18_DEBUG_SYNC
 
    ?E "SSSSTART thread create dbfs"

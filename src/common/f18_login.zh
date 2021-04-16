@@ -432,7 +432,6 @@ METHOD F18Login:server_login_form()
    nPort := ::hDbPostgresConnectionParams[ "port" ]
    cShema := ::hDbPostgresConnectionParams[ "schema" ]
 
-
    IF ( cHost == NIL ) .OR. ( nPort == NIL )
       cSrvConfig := "D"
    ENDIF

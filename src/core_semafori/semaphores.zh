@@ -666,6 +666,7 @@ FUNCTION is_last_refresh_before( cTable, nSeconds )
 
 PROCEDURE thread_dbf_refresh( cTable )
 
+   __ZHVMInit()
 
    IF open_thread( "dbf_refresh: " + cTable, .T., cTable )
       ErrorBlock( {| objError, lShowreport, lQuit | GlobalErrorHandler( objError, lShowReport, lQuit ) } )

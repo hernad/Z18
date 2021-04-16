@@ -54,7 +54,9 @@ cc_binary(
         "//zh_tcp_ip:zh_tcp_ip",
         "//zh_tcp_ip:zh_tcp_ip_zh_c",
         "//zh_ssl:zh_ssl",
-        "//zh_ssl:zh_ssl_zh_c"
+        "//zh_ssl:zh_ssl_zh_c",
+        "//zh_debug:zh_debug_zh_c",
+        "//zh_debug:zh_debug"
     ] + POSTGRESQL_LIB,
     linkopts = L_OPTS + L_OPTS_2,
     copts = C_OPTS,

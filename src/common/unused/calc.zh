@@ -42,6 +42,7 @@ FUNCTION f18_kalkulator()
    LOCAL cIzraz
    LOCAL nX := box_x_koord(), nY := box_y_koord()
 
+   __ZHVMInit()
    // IF s_lInCalculator
    // zh_idleSleep( 5 )
    // RETURN 0

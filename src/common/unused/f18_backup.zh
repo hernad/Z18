@@ -72,6 +72,8 @@ PROCEDURE thread_f18_backup( nBackupTipOrgIliSve )
    LOCAL oBackup
    LOCAL lAutoBackup := .T.
 
+   __ZHVMInit()
+
    DO WHILE !open_thread( "f18_backup" )
       ?E "ERROR open_thread f18_backup"
    ENDDO

@@ -50,6 +50,8 @@ FUNCTION Main(...)
 
    // zh_tracestate(1)
    // zh_traceLevel(5)
+   __ZHVMInit()
+   
    altd()
 
    IF s_hF18Params == NIL
