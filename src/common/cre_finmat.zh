@@ -19,7 +19,7 @@ FUNCTION cre_fin_mat( ver )
    LOCAL _created
 
 /*
-Harbour extended Field Types
+Ziher extended Field Types
 
  Type Short
  Code Name Width (Bytes) Description
